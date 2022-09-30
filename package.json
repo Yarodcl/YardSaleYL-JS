@@ -1,0 +1,24 @@
+{
+  "name": "yardsaleyl-js",
+  "version": "1.0.0",
+  "description": "Agregando dinamismo al YardSale",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Yarodcl/YardSaleYL-JS.git"
+  },
+  "keywords": [
+    "Javascript",
+    "Frontend",
+    "Node"
+  ],
+  "author": "Yarod Aliaga",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Yarodcl/YardSaleYL-JS/issues"
+  },
+  "homepage": "https://github.com/Yarodcl/YardSaleYL-JS#readme"
+}
