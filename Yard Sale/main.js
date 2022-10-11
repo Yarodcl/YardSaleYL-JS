@@ -83,7 +83,7 @@ productList.push ({
 
 /*             <div class="product-card">
                 <img src="https://images.pexels.com/photos/10365983/pexels-photo-10365983.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
-                <div class="product-info">
+                <div class="shopping-info">
                     <div>
                         <p>$120.000</p>
                         <p>Plush bear</p>
@@ -98,8 +98,41 @@ productList.push ({
 
 const cardsContainer = document.querySelector('.cards-container');
 function renderProducts(arr){
-    for(products of arr){
+    for(product of arr){
         const productCard = document.createElement('div');
         productCard.classList.add('product-card')
+
+        const productImg = document.createElement('img');
+        productImg.setAttribute('src', product.image);
+
+        const shoppingInfo = document.createElement('div');
+        shoppingInfo.classList.add('shopping-info');
+
+        const shoppingInfoChild = document.createElement('div');
+
+        const productPrice = document.createElement('p');
+        productPrice.innerText = `$${product.price}`
+        const productName = document.createElement('p');
+        productName.innerText = `${product.name}`;
+
+        shoppingInfoChild.appendChild(productPrice);
+        shoppingInfoChild.appendChild(productName);
+
+        const productFigure = document.createElement('figure')
+
+        const cartImg =  document.createElement('img')
+        cartImg.setAttribute('src', './Icons/bt_add_to_cart.svg')
+
+        productFigure.appendChild(cartImg);
+
+        shoppingInfo.appendChild(shoppingInfoChild);
+        shoppingInfo.appendChild(productFigure);
+
+        productCard.appendChild(productImg);
+        productCard.appendChild(shoppingInfo);
+        
+        cardsContainer.appendChild(productCard);
     }
 }
+
+renderProducts(productList);
